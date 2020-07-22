@@ -1,0 +1,18 @@
+<div class="footer__row">
+    <div class="footer__content">
+        {{widget type="interface/widget_logo" template="interface/widgets/logo.phtml" identificador="logofooter" imagem="wysiwyg/logo/logo.png" imagem_mobile="wysiwyg/logo/logo.png" alt_imagem="pagfun" tag_html="div" tag_html_home="div"}}
+        {{block type="menubuilder/output" identifier="footer-institucional"}}
+    </div>
+    <div class="footer__content">
+        <h3 class="footer__title">Legal</h3>
+        {{block type="menubuilder/output" identifier="footer-legal"}}
+    </div>
+    <div class="footer__content">
+        <h3 class="footer__title">Siga-nos</h3>
+        {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="perfis_footer" redes="all"}}
+    </div>
+    <div class="footer__content">
+        <h3 class="footer__title">Pague com</h3>
+        {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="pagtos_footer" pagtos="all"}}
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.steps
+    &__pipe
+        display: flex
+        align-items: center
+        margin-bottom: 10px
+
+        &:before, &:after
+            display: block
+            flex: 1 1 0%
+            height: 1px
+            background: var(--primary)
+            content: ''
+
+        .ico
+            margin: 0 10px
+            width: 36px
+            height: 20px
+            fill: url('#primary-gradient')
+
+    &__list
+        display: flex
+
+        @media media-max-lg
+            flex-direction: column
+            align-items: center
+
+        @media media-min-lg
+            justify-content: center
+
+    &__item
+        display: flex
+        align-items: center
+        padding: 10px 15px
+        color: var(--tertiary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 18px
+        opacity: .5
+
+        &--actived
+            opacity: 1
+
+            .ico
+                color: var(--primary)
+
+        .ico
+            margin-right: 5px
+            width: 38px
+            height: 25px

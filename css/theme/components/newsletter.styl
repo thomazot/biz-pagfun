@@ -1,0 +1,65 @@
+.newsletter
+    background: linear-gradient(to right, var(--secundary), var(--primary))
+    box-shadow: 0 4px 0 var(--color-shadow)
+
+    .title--sm
+        color: var(--primary-contrast)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 16px
+
+    &__form
+        margin: 0 auto
+        padding: 16px 0
+        max-width: 'calc(100vw - %s)' % gap
+        width: viewport
+
+    &__email
+        bgGradient()
+
+        position: relative
+        padding: 0
+
+        &:after
+            z-index: 1
+            background: var(--primary-contrast)
+
+        .input-email
+            position: relative
+            z-index: 2
+            border: 0
+            background: none
+            box-shadow: none
+
+    &__submit
+        bgGradient()
+
+        position: relative
+        z-index: 2
+        flex: 0 1 120px
+        padding: 0
+
+        @media media-min-sm
+            margin-left: -10px
+
+        @media media-max-sm
+            margin-top: 10px
+
+        &:after
+            background: var(--tertiary)
+
+        &:hover
+            @media media-min-lg
+                &:after
+                    background: var(--tertiary-hover)
+
+    &__btn
+        position: relative
+        z-index: 2
+        background: none
+        text-transform: uppercase
+        font-size: bold
+        font-size: 16px
+
+        &:hover
+            background: none

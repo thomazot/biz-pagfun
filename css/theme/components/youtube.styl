@@ -1,0 +1,45 @@
+.youtube
+    margin: 80px 0 50px
+
+    &__header
+        text-align: center
+
+        .ico
+            width: 36px
+            height: 20px
+            fill: url('#primary-gradient')
+
+    &__title
+        margin: 40px 0 30px
+        color: var(--tertiary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 32px
+
+        strong
+            display: block
+            color: var(--primary)
+
+    &__main
+        position: relative
+        margin: 130px 0
+
+        .ico
+            position: absolute
+            top: -85px
+            right: 100px
+            z-index: -1
+            width: 553px
+            height: 577px
+            color: #eaebed
+
+            @media media-max-sm
+                right: -20px
+                max-width: 100%
+
+        iframe
+            display: block
+            margin: 0 auto
+            max-width: 100%
+            width: 715px
+            height: 402px

@@ -1,0 +1,237 @@
+.prod
+    &__header
+        display: flex
+        margin-top: -16px
+        margin-bottom: 50px
+        padding: 5px 0
+        background: var(--tertiary)
+        color: var(--tertiary-contrast)
+        font-weight: regular
+        font-size: 13px
+
+        shadowBorder()
+
+    &__image
+        margin-right: 30px
+        margin-bottom: -10px
+        background: #fff
+
+        img
+            width: 90px
+            object-fit: cover
+
+    &__name
+        h1
+            color: var(--primary)
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 18px
+
+        .z-multi-circle
+            margin-top: 15px
+            width: 25px
+            height: 20px
+            fill: url('#primary-gradient')
+
+    &__short-description
+        color: var(--secundary)
+
+    &__location
+        padding-top: 5px
+        line-height: 1.5
+
+        .ico
+            display: inline-block
+            margin-top: -3px
+            vertical-align: middle
+
+    &__actions
+        margin: 30px 0
+
+        @media media-min-lg
+            display: flex
+            justify-content: space-between
+
+    &__button
+        bgGradient()
+
+        position: relative
+        height: 40px
+        background: none
+        box-shadow: none
+        color: var(--tertiary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 13px
+        line-height: 1
+
+        @media media-max-lg
+            margin: 5px 0
+            width: 100%
+
+        @media media-min-lg
+            padding: 0 30px
+
+        &:after
+            z-index: -1
+            background: #f4f5f6
+
+    &__section
+        color: var(--tertiary)
+        font-weight: bold
+        font-size: 13px
+        line-height: 1.5
+
+        + .prod__section
+            margin-top: 20px
+
+        &--disabled
+            opacity: .5
+            pointer-events: none
+
+    &__step
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px
+        background: #eaeced
+
+        ~ .prod__step
+            position: absolute
+            visibility: hidden
+            opacity: 0
+            transition: all .2s ease-in-out
+
+        &--actived
+            + .prod__step
+                position: relative
+                visibility: visible
+                opacity: 1
+
+            > .prod__button-action
+                .ico
+                    transform: rotate(90deg)
+
+        &:nth-child(2)
+            padding: 0 20px
+            border-top: solid 1px #d7dadd
+            text-transform: uppercase
+
+        &:nth-child(3)
+            background: #f4f5f6
+
+    &__text-uppercase
+        text-transform: uppercase
+        text-transform: uppercase
+        font-weight: regular
+        font-size: 18px
+
+        span
+            display: block
+            text-transform: none
+            font-size: 15px
+
+    &__weekday
+        text-transform: uppercase
+        font-size: 26px
+
+    &__button-action
+        display: flex
+        align-items: center
+        padding: 0
+        height: 50px
+        border: 0
+        background: none
+        box-shadow: none
+        color: var(--tertirary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 26px
+
+        span
+            padding-right: 15px
+
+            @media media-max-sm
+                display: none
+
+        .ico
+            width: 10px
+            height: 10px
+
+    &__quantity
+        display: flex
+
+        &-button
+            padding: 0
+            width: 45px
+            height: 45px
+            background: none
+            box-shadow: none
+            color: var(--tertiary)
+
+            .ico
+                width: 30px
+                height: 30px
+
+        input
+            width: 45px
+            height: 45px
+            border: 0
+            box-shadow: none
+            font-weight: medium
+            font-size: 26px
+
+    &__footer
+        margin: 50px 0
+        padding: 40px 0
+        border-top: solid 1px #f2f2f3
+        border-bottom: solid 5px #f2f2f2
+
+        @media media-min-lg
+            display: flex
+            justify-content: space-between
+
+        .price-box
+            .old-price
+                display: none
+
+            .special-price, .regular-price
+                .label
+                    display: none
+
+                .price span
+                    color: var(--tertiary)
+                    font-weight: bold
+                    font-size: 26px
+
+        .qty-wrapper
+            display: none !important
+
+        .add-to-cart-btn
+            bgGradient()
+
+            position: relative
+            padding: 0
+            height: 40px
+            background: none
+            box-shadow: none
+            font-weight: bold
+            font-size: 16px
+            line-height: 1
+
+            @media media-min-lg
+                padding: 0 30px
+
+            &:after
+                background: linear-gradient(to right, var(--primary), var(--secundary))
+                box-shadow: 0 2px 0 var(--color-shadow)
+
+            span
+                position: relative
+                z-index: 2
+
+                &:before
+                    content: 'Avançar'
+
+                span
+                    display: none

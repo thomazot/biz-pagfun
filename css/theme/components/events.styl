@@ -1,0 +1,68 @@
+.events
+    margin-top: 30px
+
+    .categories
+        .ul--0
+            display: grid
+            grid-gap: 1.5rem
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr))
+
+        .a--0
+            display: block
+            overflow: hidden
+
+            span
+                display: none
+
+            &:hover
+                @media media-min-lg
+                    img
+                        transform: scale(1.1)
+
+        img
+            width: 100%
+            height: auto
+            transition: all .2s ease-in-out
+            transform: scale(1)
+            object-fit: contain
+
+    &__footer
+        padding: 40px 0 80px
+        text-align: center
+
+        .ico
+            width: 33px
+            height: 14px
+
+            @media media-max-sm
+                display: none
+
+    &__link
+        bgGradient()
+
+        position: relative
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        margin: 0 17px
+        padding: 0 30px
+        height: 40px
+        color: var(--primary-contrast)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 16px
+
+        &:after
+            background: linear-gradient(to right, var(--secundary), var(--primary))
+            box-shadow: 0 2px 0 var(--color-shadow)
+
+        span
+            position: relative
+            z-index: 2
+
+        &:hover
+            color: var(--primary-contrast)
+
+            @media media-min-lg
+                &:after
+                    background: var(--secundary)

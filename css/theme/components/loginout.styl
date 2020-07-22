@@ -1,0 +1,44 @@
+.loginout
+    display: flex
+    align-items: center
+
+    @media media-max-lg
+        display: none
+
+    &__create
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 30px
+        height: 40px
+        color: var(--tertiary)
+        text-transform: uppercase
+        font-weight: medium
+        font-size: 16px
+
+    &__enter, &__exit
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 30px
+        height: 40px
+        color: var(--primary-contrast)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 16px
+        cursor: pointer
+
+        bgGradient()
+
+        &:after
+            z-index: -1
+            background: linear-gradient(to right, var(--primary), var(--secundary))
+            box-shadow: 0 2px 0 var(--color-shadow)
+
+        &:hover
+            color: var(--primary-contrast)
+
+            @media media-min-lg
+                &:after
+                    background: var(--primary)

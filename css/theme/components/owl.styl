@@ -1,0 +1,25 @@
+.owl
+    &-next, &-prev
+        bgGradient()
+
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: visible
+        background: none
+        box-shadow: none
+        text-indent: 0
+
+        .ico
+            position: relative
+            z-index: 1
+            width: 17px
+            height: 13px
+
+        &:before
+            display: none
+
+        &:after
+            z-index: 0
+            background: var(--primary)
+            box-shadow: 0 2px 0 rgba(255, 255, 255, .2)

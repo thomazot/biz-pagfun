@@ -1,0 +1,76 @@
+.products
+    &__case
+        display: flex
+        background: #f4f5f6
+
+    &__header
+        flex: 0 1 140px
+        background: #fff
+
+        img
+            object-fit: cover
+
+    &__main
+        flex: 1 1 0%
+        padding: 15px 20px
+
+    &__name
+        color: var(--primary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 16px
+        line-height: 1.5
+
+    &__content
+        display: flex
+        flex-flow: row wrap
+        padding: 10px 0 15px
+        color: var(--tertiary)
+        text-transform: uppercase
+        font-weight: medium
+        font-size: 13px
+
+        .ico
+            display: inline-block
+            margin-top: -2px
+            margin-right: 5px
+            width: 15px
+            height: 15px
+            vertical-align: middle
+
+    &__day, &__timer, &__locations
+        padding: 5px 0
+
+    &__day, &__timer
+        flex: 1 1 50%
+
+    &__locations
+        padding-top: 8px
+
+    &__buy
+        bgGradient()
+
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 30px
+        color: var(--primary-contrast)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 13px
+
+        span
+            position: relative
+            z-index: 2
+
+        &:after
+            background: linear-gradient(to right, var(--primary), var(--secundary))
+
+        &:hover
+            color: var(--primary-contrast)
+
+            &:after
+                @media media-min-lg
+                    background: var(--primary)
